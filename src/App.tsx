@@ -38,19 +38,23 @@ const App: React.FC = () => {
         <>
             {/* ATHLETS Section */}
             <section className="md:pl-[50%] lg:pl-[50%]">
-                <Heading1 className="mt-[20px] ml-[20px] mb-[251px] md:mt-[50px] md:ml-[0] md:mb-[15px]">ATHLETS</Heading1>
+                <Heading1 className="mt-[20px] ml-[20px] mb-[251px] md:mt-[50px] md:ml-[0] md:mb-[15px]">
+                    ATHLETS
+                </Heading1>
             </section>
-            <section className="md:pl-[50%] lg:pl-[50%]">
+            <section className="">
                 <List items={athleteList} style="athlete" className="hidden md:block" />
                 <Carousel items={athleteList} className="md:hidden" />
             </section>
 
             {/* Player Section */}
             <section>
-                <Heading1 className="mt-[20px] ml-[20px] mb-[220px] md:mt-[50px] md:ml-[30px] md:mb-[15px]">PLAYERS</Heading1>
+                <Heading1 className="mt-[20px] ml-[20px] mb-[220px] md:mt-[50px] md:ml-[30px] md:mb-[15px]">
+                    PLAYERS
+                </Heading1>
             </section>
             <section>
-                <List items={playerList} style="player" className="hidden md:block ml-[30px]" />
+                <List items={playerList} style="player" className="hidden md:block" />
                 <Carousel items={playerList} className="md:hidden" />
             </section>
         </>
