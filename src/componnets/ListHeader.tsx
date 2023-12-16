@@ -7,7 +7,7 @@ import { ListStyles } from '../types/types';
 interface ListPointProps extends React.PropsWithChildren, Classname {
     number: string;
     light?: boolean;
-    style: ListStyles;
+    style?: ListStyles;
 }
 
 const ListPointTextStyle: {[key in ListStyles]: string} = {
@@ -17,7 +17,7 @@ const ListPointTextStyle: {[key in ListStyles]: string} = {
 
 const ListPoint: React.FC<ListPointProps> = (props) => {
     const defaultClassName = "flex flex-col";
-    const numberLightColor = ListPointTextStyle[props.style];
+    const numberLightColor = props.style && ListPointTextStyle[props.style];
     return (
         <div className={cn(defaultClassName, props.className)}>
             <p className={cn("font-normal text-[14px] text-[#000] leading-[normal] tracking-[1.5px] mb-[1px] md:text-[18px] md:mb-[4px]", props.light && numberLightColor)}>
@@ -31,7 +31,7 @@ const ListPoint: React.FC<ListPointProps> = (props) => {
 interface ListHeaderProps extends React.PropsWithChildren, Classname {
     number: string;
     light?: boolean;
-    style: ListStyles;
+    style?: ListStyles;
 }
 
 const ListHeader: React.FC<ListHeaderProps> = (props) => {
