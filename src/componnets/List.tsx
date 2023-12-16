@@ -48,7 +48,7 @@ const listStyle: { [key in ListStyles]: Style[] } = {
 
 const listPaddingStyle: { [key in ListStyles]: string } = {
     "athlete": "p-[30px] pl-[40%] md2:p-[60px] md2:pl-[50%]",
-    "player": "p-[30px] md2:pl-[18%]",
+    "player": "p-[30px] md2:p-[60px] md2:pl-[18%]",
 }
 
 const bodyStyle : { [key in ListStyles]: string } = {

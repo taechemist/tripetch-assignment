@@ -12,7 +12,7 @@ const BasketballImage: React.FC<BasketballImageProps> = (props) => {
     const className = props.className ? cn(defaultClassName, props.className) : defaultClassName;
     return (
         <div className={className}>
-            <img src={basketballerLg} className="hidden md2:block w-[50vw] h-auto mt-[-90px] mr-[5%]" />
+            <img src={basketballerLg} className="hidden md2:block w-[50vw] max-w-[956px] h-auto mt-[-90px] mr-[5%]" />
             <img src={basketballerMd} className="hidden md:block md2:hidden mt-[-19px]" />
             <img src={basketballerSm} className="block md:hidden mt-[74px]" />
         </div>
