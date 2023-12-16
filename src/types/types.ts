@@ -3,4 +3,6 @@ interface ListItem {
     text: string;
 }
 
-export type { ListItem };
+type ListStyles = "athlete" | "player";
+
+export type { ListItem, ListStyles };
