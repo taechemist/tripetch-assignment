@@ -5,9 +5,12 @@ export default {
     screens: {
         'sm': '320px',
         'md': '768px',
+        'md2': '1360px',
         'lg': '1920px',
     },
-    extend: {},
+    extend: {
+
+    },
   },
   plugins: [],
 }

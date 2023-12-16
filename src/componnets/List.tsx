@@ -46,6 +46,16 @@ const listStyle: { [key in ListStyles]: Style[] } = {
     ],
 }
 
+const listPaddingStyle: { [key in ListStyles]: string } = {
+    "athlete": "p-[30px] pl-[40%] md2:p-[60px] md2:pl-[50%]",
+    "player": "p-[30px] md2:pl-[18%]",
+}
+
+const bodyStyle : { [key in ListStyles]: string } = {
+    "athlete": "md:max-w-[717px]",
+    "player": "md:max-w-[60%] md2:max-w-[500px] lg:max-w-[717px]",
+}
+
 const List: React.FC<ListProps> = (props) => {
 
     const items = props.items.map((item, index) => {
@@ -55,12 +65,12 @@ const List: React.FC<ListProps> = (props) => {
         return (
             <div
                 key={`${item.title}-${index}`}
-                className={cn("md:p-[30px] lg:p-[60px]", style.bg)}
+                className={cn(listPaddingStyle[props.style], style.bg)}
             >
                 <div className="pb-[10px]">
                     <ListHeader style={props.style} light={style.light} number={numberText}>{item.title}</ListHeader>
                 </div>
-                <Body1 className={cn(style.light && "md:text-[#FFF]")}>{item.text}</Body1>
+                <Body1 className={cn(bodyStyle[props.style], style.light && "md:text-[#FFF]")}>{item.text}</Body1>
             </div>
         );
     })
